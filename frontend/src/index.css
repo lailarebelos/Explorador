@@ -1,0 +1,119 @@
+/* ── Fonte de fallback (Inter via Google Fonts) ───────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Tokens LDS (fallback local — troca transparente com @lds/themes) */
+@import './styles/tokens.css';
+
+/* ── Tokens de marca (--brand-*) ─────────────────────────── */
+@import './styles/brand.css';
+
+/*
+ * Roobert — tipografia oficial Localiza (Display/CoType Foundry).
+ * Os arquivos .woff2 devem ser fornecidos pelo time de marca/LDS
+ * e colocados em /public/fonts/roobert/. Enquanto não disponíveis,
+ * o fallback Inter é aplicado automaticamente pela stack abaixo.
+ */
+@font-face {
+  font-family: 'Roobert';
+  src: url('/fonts/roobert/Roobert-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roobert';
+  src: url('/fonts/roobert/Roobert-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roobert';
+  src: url('/fonts/roobert/Roobert-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roobert';
+  src: url('/fonts/roobert/Roobert-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Legado — bridge para o CSS existente ─────────────────── */
+/*
+ * Estas variáveis mantêm compatibilidade com App.css enquanto
+ * o Entregável 2 ainda não migrou todos os componentes para --lds-*.
+ * Serão removidas ao final do Entregável 2.
+ */
+:root {
+  --primary:              var(--brand-verde-citrico);
+  --primary-foreground:   var(--brand-verde-escuro);
+  --secondary:            var(--brand-verde-bandeira);
+  --secondary-foreground: #FFFFFF;
+  --background:           var(--lds-color-neutral-background-subtle);
+  --foreground:           var(--lds-color-neutral-foreground-muted);
+  --card:                 var(--lds-color-neutral-surface-default);
+  --card-foreground:      var(--lds-color-neutral-foreground-muted);
+  --muted:                var(--lds-color-neutral-surface-low);
+  --muted-foreground:     var(--lds-color-neutral-foreground-low);
+  --border:               var(--lds-color-neutral-border-low);
+  --destructive:          var(--lds-color-feedback-error-default);
+  --destructive-foreground: #FFFFFF;
+
+  --font-sans:            var(--lds-font-family-base);
+  --font-weight-normal:   var(--lds-font-weight-regular);
+  --font-weight-medium:   var(--lds-font-weight-medium);
+  --font-weight-semibold: var(--lds-font-weight-semibold);
+  --font-weight-bold:     var(--lds-font-weight-bold);
+
+  --radius:     var(--lds-border-radius-sm);
+  --radius-sm:  var(--lds-border-radius-xs);
+  --radius-lg:  var(--lds-border-radius-soft);
+  --radius-full: var(--lds-border-radius-pill);
+
+  --spacing-xs:  var(--lds-spacing-1);
+  --spacing-sm:  var(--lds-spacing-2);
+  --spacing-md:  var(--lds-spacing-4);
+  --spacing-lg:  var(--lds-spacing-6);
+  --spacing-xl:  var(--lds-spacing-8);
+  --spacing-2xl: var(--lds-spacing-12);
+
+  --shadow-sm: var(--lds-shadow-sm);
+  --shadow-md: var(--lds-shadow-md);
+  --shadow-lg: var(--lds-shadow-lg);
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--lds-font-family-base);
+  font-weight: var(--lds-font-weight-regular);
+  font-size: var(--lds-font-size-base);
+  background-color: var(--lds-color-neutral-background-subtle);
+  color: var(--lds-color-neutral-foreground-muted);
+  line-height: var(--lds-line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

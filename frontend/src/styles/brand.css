@@ -1,0 +1,34 @@
+/*
+ * Brand tokens — Localiza (Slide Mestre, vetores canônicos)
+ * Use APENAS em elementos de marca: grafismos, chips de sugestão,
+ * sombra dura cítrica, barra lateral de InsightCard.
+ * NUNCA use --brand-verde-citrico como cor de texto sobre fundo claro,
+ * nem como fundo sob texto branco.
+ */
+
+:root {
+  --brand-verde-bandeira: #018444; /* Verde Bandeira — Pantone 348 C */
+  --brand-verde-citrico:  #78DE1F; /* Verde Cítrico  — Pantone 2287 C */
+  --brand-verde-escuro:   #003418; /* Verde Escuro   — LDS primary-foreground */
+  --brand-verde-tint:     #CEFDAF; /* Tint cítrico — chips de sugestão, callouts leves */
+
+  /* Superfície da sidebar (sempre escura, varia por tema) */
+  --brand-sidebar-bg: #003418;
+
+  /* Perigo (excluir, ações destrutivas) */
+  --brand-danger-fg:       #D92020;
+  --brand-danger-hover-fg: #B01A1A;
+  --brand-danger-hover-bg: #FFE4E4;
+  --brand-danger-btn-bg:   #D92020;
+  --brand-danger-btn-bg-hover: #B01A1A;
+}
+
+[data-theme="dark"] {
+  --brand-verde-tint:     rgba(120, 222, 31, 0.14); /* chip bg escuro */
+  --brand-sidebar-bg:     #0A1A11;                  /* sidebar mais escura p/ separação */
+  --brand-danger-fg:       #FF6B7A;
+  --brand-danger-hover-fg: #FF6B7A;
+  --brand-danger-hover-bg: rgba(255, 107, 122, 0.14);
+  --brand-danger-btn-bg:   #C0392B;                 /* botão vermelho permanece */
+  --brand-danger-btn-bg-hover: #A93226;
+}

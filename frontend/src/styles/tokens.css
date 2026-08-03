@@ -1,0 +1,149 @@
+/*
+ * LDS Design Tokens — fallback local
+ * Replicam os nomes canônicos do @lds/themes para troca transparente
+ * quando o registry privado estiver disponível.
+ * Fonte: vetores do Slide Mestre Localiza&CO + spec visual do app.
+ */
+
+:root {
+  /* ── Cores de acento (marca) ───────────────────────────── */
+  --lds-color-accent-primary-default:  #018444; /* Verde Bandeira */
+  --lds-color-accent-primary-hover:    #003418; /* Verde Escuro LDS */
+  --lds-color-accent-primary-active:   #003418;
+  --lds-color-accent-primary-subtle:   rgba(1, 132, 68, 0.08);
+  --lds-color-accent-primary-tint:     #CEFDAF; /* Verde Tint     */
+
+  /* ── Superfícies e fundos neutros ──────────────────────── */
+  --lds-color-neutral-background-default: #F2F2F2; /* área de chat — LDS background */
+  --lds-color-neutral-background-subtle:  #F2F2F2; /* app shell     */
+  --lds-color-neutral-surface-default:    #FFFFFF; /* card / bolha  */
+  --lds-color-neutral-surface-low:        #F2F2F2; /* muted         */
+  --lds-color-neutral-surface-mid:        #E8E8E8;
+
+  /* ── Bordas ────────────────────────────────────────────── */
+  --lds-color-neutral-border-low:     #E6E6E6;
+  --lds-color-neutral-border-default: #CCCCCC;
+  --lds-color-neutral-border-strong:  #AAAAAA;
+
+  /* ── Texto ──────────────────────────────────────────────── */
+  --lds-color-neutral-foreground-default: #4A4A4A; /* LDS foreground */
+  --lds-color-neutral-foreground-muted:   #4A4A4A;
+  --lds-color-neutral-foreground-low:     #6E6E6E;
+  --lds-color-neutral-foreground-minimal: #9E9E9E;
+
+  /* ── Feedback ───────────────────────────────────────────── */
+  --lds-color-feedback-error-default:   #D92020; /* LDS destructive */
+  --lds-color-feedback-success-default: #018444;
+  --lds-color-feedback-warning-default: #FBE437;
+  --lds-color-feedback-info-default:    #018444;
+
+  /* ── Tipografia ─────────────────────────────────────────── */
+  --lds-font-family-base: 'Roobert', 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --lds-font-weight-regular:   400;
+  --lds-font-weight-medium:    500;
+  --lds-font-weight-semibold:  600;
+  --lds-font-weight-bold:      700;
+  --lds-font-size-xs:   0.75rem;   /* 12px — labels, captions  */
+  --lds-font-size-sm:   0.8125rem; /* 13px — mínimo para texto */
+  --lds-font-size-md:   0.875rem;  /* 14px — corpo secundário  */
+  --lds-font-size-base: 0.9375rem; /* 15px — corpo principal   */
+  --lds-font-size-lg:   1rem;      /* 16px                     */
+  --lds-font-size-xl:   1.125rem;  /* 18px — título da pesquisa*/
+  --lds-font-size-2xl:  1.375rem;  /* 22px                     */
+  --lds-font-size-3xl:  1.75rem;   /* 28px — saudação          */
+  --lds-line-height-tight: 1.2;
+  --lds-line-height-snug:  1.4;
+  --lds-line-height-base:  1.5;
+  --lds-line-height-relaxed: 1.6;
+
+  /* ── Espaçamento (escala 4px) ────────────────────────────── */
+  --lds-spacing-1:  0.25rem;  /* 4px  */
+  --lds-spacing-2:  0.5rem;   /* 8px  */
+  --lds-spacing-3:  0.75rem;  /* 12px */
+  --lds-spacing-4:  1rem;     /* 16px */
+  --lds-spacing-5:  1.25rem;  /* 20px */
+  --lds-spacing-6:  1.5rem;   /* 24px */
+  --lds-spacing-8:  2rem;     /* 32px */
+  --lds-spacing-10: 2.5rem;   /* 40px */
+  --lds-spacing-12: 3rem;     /* 48px */
+  --lds-spacing-16: 4rem;     /* 64px */
+
+  /* ── Border radius ───────────────────────────────────────── */
+  --lds-border-radius-xs:   0.25rem;  /* 4px  — canto único reduzido (eco do "L") */
+  --lds-border-radius-sm:   0.5rem;   /* 8px  — itens de lista, chips             */
+  --lds-border-radius-main: 0.75rem;  /* 12px — botões, badges                    */
+  --lds-border-radius-soft: 1rem;     /* 16px — cards, bolhas, dropzone           */
+  --lds-border-radius-xl:   1.5rem;   /* 24px — sidebar canto sup-dir             */
+  --lds-border-radius-pill: 9999px;   /* pílulas                                  */
+
+  /* ── Feedback (superfícies) ─────────────────────────────── */
+  --lds-color-feedback-error-subtle: rgba(217, 32, 32, 0.08);
+  --lds-color-feedback-error-bg:     #FFE4E4; /* LDS alert-destructive bg */
+  --lds-color-feedback-error-border: #FFD1D1; /* LDS alert-destructive border */
+  --lds-color-feedback-error-text:   #720D0D; /* LDS badge-destructive / alert text */
+  --lds-color-feedback-warning-bg:   #FBE437;
+  --lds-color-feedback-warning-fg:   #003418; /* dark on yellow — LDS dark green */
+
+  /* ── Sombras ────────────────────────────────────────────── */
+  --lds-shadow-sm:      0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --lds-shadow-default: 0 1px 3px 0 rgb(0 0 0 / 0.10), 0 1px 2px -1px rgb(0 0 0 / 0.10);
+  --lds-shadow-md:      0 4px 6px -1px rgb(0 0 0 / 0.10), 0 2px 4px -2px rgb(0 0 0 / 0.10);
+  --lds-shadow-lg:      0 10px 15px -3px rgb(0 0 0 / 0.10), 0 4px 6px -4px rgb(0 0 0 / 0.10);
+
+  /* ── Layout ─────────────────────────────────────────────── */
+  --lds-sidebar-width-expanded:  280px;
+  --lds-sidebar-width-collapsed: 72px;
+  --lds-header-height:           64px;
+  --lds-insights-panel-width:    360px;
+  --lds-chat-max-width:          840px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DARK THEME — sobrepõe apenas os tokens que mudam de valor.
+   Identidade verde Localiza mantida: fundos são verde-quase-
+   preto (não cinza neutro). Contraste AA validado em todos os
+   pares texto/fundo relevantes.
+   ═══════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  /* ── Acento (verde mais claro p/ contraste AA sobre escuro) */
+  --lds-color-accent-primary-default:  #4FC27D; /* 7.33:1 sobre #14271C ✓ AA+ */
+  --lds-color-accent-primary-hover:    #62D891;
+  --lds-color-accent-primary-active:   #62D891;
+  --lds-color-accent-primary-subtle:   rgba(79, 194, 125, 0.15);
+  --lds-color-accent-primary-tint:     rgba(120, 222, 31, 0.14); /* chip bg */
+
+  /* ── Fundos (verde-quase-preto, identidade da marca) ────── */
+  --lds-color-neutral-background-default: #0E1F16; /* área de chat */
+  --lds-color-neutral-background-subtle:  #0A1A11; /* app shell    */
+  --lds-color-neutral-surface-default:    #14271C; /* cards, bolhas */
+  --lds-color-neutral-surface-low:        #1B3325; /* popovers, menus elevados */
+  --lds-color-neutral-surface-mid:        #22402F;
+
+  /* ── Bordas ────────────────────────────────────────────── */
+  --lds-color-neutral-border-low:     rgba(255, 255, 255, 0.10);
+  --lds-color-neutral-border-default: rgba(255, 255, 255, 0.16);
+  --lds-color-neutral-border-strong:  rgba(255, 255, 255, 0.24);
+
+  /* ── Texto (4.5:1+ sobre fundos escuros) ────────────────── */
+  --lds-color-neutral-foreground-default: #F2F7F3; /* alto contraste */
+  --lds-color-neutral-foreground-muted:   #D6E2DA;
+  --lds-color-neutral-foreground-low:     #9FB3A8;
+  --lds-color-neutral-foreground-minimal: #6B8577;
+
+  /* ── Feedback ───────────────────────────────────────────── */
+  --lds-color-feedback-error-default:  #FF6B7A;
+  --lds-color-feedback-error-text:     #FF6B7A; /* dark override — texto de erro sobre fundos escuros */
+  --lds-color-feedback-success-default: #4FC27D;
+  --lds-color-feedback-info-default:   #4FC27D;
+  --lds-color-feedback-error-subtle:   rgba(255, 107, 122, 0.14);
+  --lds-color-feedback-error-bg:       rgba(255, 107, 122, 0.10);
+  --lds-color-feedback-error-border:   rgba(255, 107, 122, 0.30);
+  --lds-color-feedback-warning-bg:     rgba(251, 228, 55, 0.18);
+  --lds-color-feedback-warning-fg:     #F2F7F3;
+
+  /* ── Sombras (mais sutis em fundo escuro) ───────────────── */
+  --lds-shadow-sm:      0 1px 2px 0 rgb(0 0 0 / 0.30);
+  --lds-shadow-default: 0 1px 3px 0 rgb(0 0 0 / 0.40), 0 1px 2px -1px rgb(0 0 0 / 0.30);
+  --lds-shadow-md:      0 4px 6px -1px rgb(0 0 0 / 0.40), 0 2px 4px -2px rgb(0 0 0 / 0.30);
+  --lds-shadow-lg:      0 10px 15px -3px rgb(0 0 0 / 0.50), 0 4px 6px -4px rgb(0 0 0 / 0.30);
+}

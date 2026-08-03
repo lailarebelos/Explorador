@@ -1,0 +1,23 @@
+# ── Segredos: NUNCA commitar ──────────────────────────────────────────────────
+.env
+*.env.local
+
+# ── Dependências e build ──────────────────────────────────────────────────────
+node_modules/
+dist/
+
+# ── Dados enviados e telemetria de uso ────────────────────────────────────────
+uploads/
+metrics/
+*.xlsx
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+
+# ── Configuração local de ferramentas ─────────────────────────────────────────
+.claude/
+*.code-workspace
+
+# ── Sistema operacional ───────────────────────────────────────────────────────
+Thumbs.db
+.DS_Store
